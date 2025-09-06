@@ -6,13 +6,22 @@ html, body {
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
 }
-main { flex: 1; padding-top: 75px; }
+main { 
+  flex: 1; 
+  padding-top: 75px; 
+  /* Ensure content doesn’t go under fixed navbar */
+}
+
 /* ==== NAVBAR BASE ==== */
 .custom-navbar {
   background-color: #000;
   transition: all 0.3s ease-in-out;
   z-index: 1030;
   height: 80px;
+  position: fixed; /* Keep the navbar fixed */
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .custom-navbar.scrolled {
@@ -42,7 +51,6 @@ main { flex: 1; padding-top: 75px; }
   transition: color 0.3s ease;
 }
 
-
 .navbar .nav-link:hover {
   color: #ffd700 !important;
 }
@@ -68,7 +76,7 @@ main { flex: 1; padding-top: 75px; }
   border: none;
   border-radius: 8px;
   padding: 0.5rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: none;
   opacity: 0;
   transform: translateY(15px);
@@ -139,105 +147,35 @@ main { flex: 1; padding-top: 75px; }
 }
 
 /* ==== RESPONSIVE ADJUSTMENTS ==== */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .navbar-brand {
     font-size: 1.25rem;
   }
 
+  .navbar .nav-link {
+    font-size: 0.9rem;
+  }
+
   .btn-gradient {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 
-
-/* Footer */
-/* Footer Base */
-.footer {
-  background-color: #0d0d0d; /* Darker black for better contrast */
-  color: #e0e0e0; /* Light gray for readability */
-  font-size: 1rem;
-  user-select: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.text-gold {
-  color: #ffbf00; /* Softer gold for elegance */
-}
-
-.text-gray-light {
-  color: #c0c0c0; /* Light gray for less harsh text */
-}
-
-.footer-logo {
-  width: 70px;
-  filter: brightness(0) invert(1);
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 0 15px #ffbf0055;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #ffbf00cc;
-}
-
-.footer-link {
-  color: #c0c0c0;
-  text-decoration: none;
-  width: fit-content;
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
-  position: relative;
-}
-
-.footer-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: #ffbf00;
-  transition: width 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #ffbf00;
-  transform: translateX(6px);
-}
-
-.footer-link:hover::after {
-  width: 100%;
-}
-
-.footer-social {
-  color: #c0c0c0;
-  margin-right: 16px;
-  font-size: 1.4rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
-}
-
-.footer-social:hover {
-  color: #ffbf00;
-  transform: scale(1.3) rotate(15deg);
-  text-shadow: 0 0 10px #ffbf00cc;
-}
-
-/* Horizontal Rule */
-hr.border-secondary {
-  border-color: #444 !important;
-  opacity: 0.5;
-}
-
-/* Responsive Adjustments */
+/* For Tablets (Medium Screens) */
 @media (max-width: 991px) {
+  .custom-navbar {
+    height: 70px; /* Adjust navbar height */
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.9rem;
+  }
+
   .footer .row {
     text-align: center;
   }
@@ -252,5 +190,54 @@ hr.border-secondary {
   .col-md-4 {
     margin-bottom: 2rem;
   }
+
+  .btn-gradient {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
+/* For Small Devices (Mobile) */
+@media (max-width: 767px) {
+  /* Make navbar smaller and stack items */
+  .custom-navbar {
+    height: 60px; /* Smaller navbar on mobile */
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .navbar .nav-link::after {
+    width: 50%;
+  }
+
+  .btn-gradient {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    width: 100%; /* Make the button full width on small screens */
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Footer - Small Devices */
+@media (max-width: 480px) {
+  .footer .footer-logo {
+    width: 60px; /* Smaller footer logo */
+  }
+
+  .footer-social {
+    font-size: 1.2rem; /* Smaller icons */
+    margin-right: 10px;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+  }
+}
