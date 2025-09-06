@@ -1,81 +1,42 @@
-<header class="navbar navbar-expand-lg navbar-dark fixed-top py-3 custom-navbar">
+<footer class="footer bg-black text-light pt-5 pb-4">
   <div class="container">
-    <!-- Navbar Brand (Logo) -->
-    <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="/index.html">
-      <img src="/assets/images/vim.png" alt="Logo" width="40" class="me-2"> Vibrant India Magazine
-    </a>
-    
-    <!-- Navbar Toggler Button for Small Screens -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="row gy-4 align-items-start">
+      <!-- Logo + About -->
+      <div class="col-md-4 d-flex align-items-start"><a href="/index.html">
+        <img src="/assets/images/vim.png" alt="Vibrant India Logo" class="footer-logo me-3"/></a>
+        <div>
+          <h5 class="fw-bold mb-3 text-gold">Vibrant India Magazine</h5>
+          <p class="small text-gray-light">
+            Your trusted source for industry insights, market news, and innovations shaping the future of India.
+          </p>
+        </div>
+      </div>
 
-    <!-- Navbar Links (Collapsed on Small Screens) -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        
-        <!-- Home Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html">Home</a>
-        </li>
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h6 class="fw-bold mb-3 text-gold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/pages/about/aboutmagazine.html" class="footer-link">About Us</a></li>
+          <li><a href="/pages/Industry/industrynews.html" class="footer-link">Industry News</a></li>
+          <li><a href="/pages/features/articles.html" class="footer-link">Articles</a></li>
+          <li><a href="/Contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
 
-        <!-- About Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">About</a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/pages/about/aboutmagazine.html"><i class="fas fa-book-open me-2"></i>About the Magazine</a></li>
-            <li><a class="dropdown-item" href="/pages/about/ourteam.html"><i class="fas fa-users me-2"></i>Our Team</a></li>
-            <li><a class="dropdown-item" href="/pages/about/mission&vision.html"><i class="fas fa-bullseye me-2"></i>Mission & Vision</a></li>
-          </ul>
-        </li>
-
-        <!-- Industry Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="industryDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Industry</a>
-          <ul class="dropdown-menu" aria-labelledby="industryDropdown">
-            <li><a class="dropdown-item" href="/pages/Industry/industrynews.html"><i class="fas fa-newspaper me-2"></i>Industry News</a></li>
-            <li><a class="dropdown-item" href="/pages/Industry/marketinsights.html"><i class="fas fa-chart-line me-2"></i>Market Insights</a></li>
-            <li><a class="dropdown-item" href="/pages/Industry/report&analysis.html"><i class="fas fa-file-alt me-2"></i>Reports & Analysis</a></li>
-          </ul>
-        </li>
-
-        <!-- Features Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Features</a>
-          <ul class="dropdown-menu" aria-labelledby="featuresDropdown">
-            <li><a class="dropdown-item" href="/pages/features/articles.html"><i class="fas fa-pen-nib me-2"></i>Articles</a></li>
-            <li><a class="dropdown-item" href="/pages/features/interviews.html"><i class="fas fa-microphone me-2"></i>Interviews</a></li>
-            <li><a class="dropdown-item" href="/pages/features/innovations.html"><i class="fas fa-lightbulb me-2"></i>Innovations</a></li>
-          </ul>
-        </li>
-
-        <!-- Advertise Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="advertiseDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Advertise</a>
-          <ul class="dropdown-menu" aria-labelledby="advertiseDropdown">
-            <li><a class="dropdown-item" href="/pages/Advertise/advertisewithus.html"><i class="fas fa-bullhorn me-2"></i>Advertise With Us</a></li>
-            <li><a class="dropdown-item" href="/pages/Advertise/sponsorship.html"><i class="fas fa-handshake me-2"></i>Sponsorship</a></li>
-            <li><a class="dropdown-item" href="/pages/Advertise/mediakit.html"><i class="fas fa-folder-open me-2"></i>Media Kit</a></li>
-          </ul>
-        </li>
-
-        <!-- Contact Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="/Contact.html">Contact</a>
-        </li>
-
-        <!-- Subscription Button -->
-        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-          <a href="/subscribe.html" class="btn btn-gradient px-4 py-2 d-flex align-items-center">
-            <i class="fas fa-envelope-open-text me-2"></i>Subscribe
-          </a>
-        </li>
-      </ul>
+      <!-- Contact + Social -->
+      <div class="col-md-4">
+        <h6 class="fw-bold mb-3 text-gold">Contact</h6>
+        <p class="mb-1 text-gray-light"><i class="fa-solid fa-envelope me-2"></i> info@vibrantindiafair.com</p>
+        <p class="mb-3 text-gray-light"><i class="fa-solid fa-phone me-2"></i> +91 9924488938</p>
+        <div>
+          <a href="https://www.facebook.com/vibrant.india.94/" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://in.linkedin.com/company/vibrant-india-tech" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/vibrantindiatech/" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
+
+    <hr class="my-4 border-secondary" />
+    <p class="text-center small mb-0 text-gray-light">&copy; 2025 Vibrant India Magazine. All rights reserved.</p>
   </div>
-</header>
+</footer>
