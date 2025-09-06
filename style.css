@@ -6,7 +6,11 @@ html, body {
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
 }
-main { flex: 1; padding-top: 75px; }
+main {
+  flex: 1;
+  padding-top: 75px;
+}
+
 /* ==== NAVBAR BASE ==== */
 .custom-navbar {
   background-color: #000;
@@ -41,7 +45,6 @@ main { flex: 1; padding-top: 75px; }
   position: relative;
   transition: color 0.3s ease;
 }
-
 
 .navbar .nav-link:hover {
   color: #ffd700 !important;
@@ -139,9 +142,15 @@ main { flex: 1; padding-top: 75px; }
 }
 
 /* ==== RESPONSIVE ADJUSTMENTS ==== */
+
+/* For Small Devices (Phones) */
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 1.25rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
   }
 
   .btn-gradient {
@@ -149,8 +158,80 @@ main { flex: 1; padding-top: 75px; }
     text-align: center;
     justify-content: center;
   }
+
+  .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .dropdown-item {
+    padding: 0.8rem 1.5rem;
+  }
 }
 
+/* For Medium Devices (Tablets) */
+@media (max-width: 991px) {
+  .navbar .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .btn-gradient {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .dropdown-item {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .footer .row {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social {
+    margin-top: 1rem;
+  }
+
+  .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* For Large Devices (Desktops) */
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .btn-gradient {
+    width: auto;
+    text-align: center;
+  }
+
+  .footer .row {
+    text-align: left;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
+}
 
 /* Footer */
 /* Footer Base */
@@ -235,22 +316,3 @@ hr.border-secondary {
   border-color: #444 !important;
   opacity: 0.5;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-  .footer .row {
-    text-align: center;
-  }
-  .footer-logo {
-    margin-bottom: 1.2rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .footer-social {
-    margin-top: 1rem;
-  }
-  .col-md-4 {
-    margin-bottom: 2rem;
-  }
-}
-
